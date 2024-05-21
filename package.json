@@ -1,0 +1,24 @@
+{
+  "name": "1high",
+  "type": "module",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tsx watch ./src/server.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@types/node": "^20.12.12",
+    "fastify": "^4.27.0",
+    "typescript": "^5.4.5",
+    "uuidv4": "^6.2.13"
+  },
+  "devDependencies": {
+    "drizzle-kit": "^0.21.2",
+    "tsx": "^4.10.5"
+  }
+}

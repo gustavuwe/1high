@@ -1,0 +1,14 @@
+services:
+  postgresql:
+    image: bitnami/postgresql:latest
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_DB=1high
+    volumes:
+      - ./pgdata:/data/postgres
+
+volumes:
+  postgresql_data:
