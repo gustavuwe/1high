@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "tsx watch ./src/server.ts"
+    "dev": "tsx watch ./src/server.ts",
+    "db:generate": "drizzle-kit generate",
+    "db:drop": "drizzle-kit drop",
+    "db:migrate": "tsx src/db/migrate.ts"
   },
   "keywords": [],
   "author": "",
@@ -13,7 +16,11 @@
   "description": "",
   "dependencies": {
     "@types/node": "^20.12.12",
+    "dotenv": "^16.4.5",
+    "drizzle-orm": "^0.30.10",
     "fastify": "^4.27.0",
+    "pg": "^8.11.5",
+    "postgres": "^3.4.4",
     "typescript": "^5.4.5",
     "uuidv4": "^6.2.13"
   },

@@ -1,11 +1,29 @@
-import Fastify from 'fastify';
+import Fastify from "fastify";
+import { usersRepositories } from "./repositories/users.repositories";
 
-const app = Fastify({
+interface RequestUser {
+  email: string;
+  username: string;
+  password: string;
+}
 
+const app = Fastify({});
+
+app.get("/", (request, reply) => {
+  reply.send({ hello: "world" });
 });
 
-app.get('/', (request, reply) => {
-  reply.send({ hello: 'world' });
+app.post("/register", async (request, reply) => {
+
+  const { email, username, password } = request.body;
+
+  try {
+    usersRepositories.createUser(email, username, password);
+  } catch (err) {
+    return reply.status(500).send(err);
+  }
+
+  return reply.status(201).send();
 });
 
 app.listen({ port: 3000 }, (err, adress) => {
@@ -13,4 +31,5 @@ app.listen({ port: 3000 }, (err, adress) => {
     app.log.error(err);
     process.exit(1);
   }
+  console.log(`Server is Running on ${adress}`);
 });
