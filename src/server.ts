@@ -1,5 +1,6 @@
-import Fastify from "fastify";
-import { usersRepositories } from "./repositories/users.repositories";
+import 'dotenv/config';
+import Fastify from 'fastify';
+import { usersRepositories } from './repositories/users.repositories';
 
 interface RequestUser {
   email: string;
@@ -7,14 +8,15 @@ interface RequestUser {
   password: string;
 }
 
+console.log(process.env.DATABASE_URL);
+
 const app = Fastify({});
 
-app.get("/", (request, reply) => {
-  reply.send({ hello: "world" });
+app.get('/', (request, reply) => {
+  reply.send({ hello: 'world' });
 });
 
-app.post("/register", async (request, reply) => {
-
+app.post('/register', async (request, reply) => {
   const { email, username, password } = request.body;
 
   try {

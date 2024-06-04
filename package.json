@@ -18,17 +18,19 @@
     "dotenv": "^16.4.5",
     "drizzle-orm": "^0.30.10",
     "fastify": "^4.27.0",
-    "pg": "^8.11.5",
     "postgres": "^3.4.4",
     "uuidv4": "^6.2.13"
   },
   "devDependencies": {
+    "@eslint/js": "^9.4.0",
+    "@types/eslint__js": "^8.42.3",
     "@types/node": "^20.12.12",
-    "typescript": "^5.4.5",
     "drizzle-kit": "^0.21.2",
-    "eslint": "^9.3.0",
+    "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "prettier": "3.2.5",
-    "tsx": "^4.10.5"
+    "tsx": "^4.10.5",
+    "typescript": "^5.4.5",
+    "typescript-eslint": "^7.12.0"
   }
 }

@@ -1,14 +1,7 @@
 class productsRepositories {
+  constructor() {}
 
-    
-
-    constructor() {
-        
-    }
-
-    createUser() {
-        
-    }
+  createUser() {}
 }
 
-export { productsRepositories }
+export { productsRepositories };

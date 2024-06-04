@@ -1,6 +1,5 @@
-import "dotenv/config";
-import { UserTable } from "../drizzle/schemas/User";
-import { db } from "../drizzle/db";
+import { UserTable } from '../drizzle/schemas/User';
+import { db } from '../drizzle/db';
 
 interface RegisterUser {
   email: string;
