@@ -2,11 +2,11 @@ import 'dotenv/config'
 import Fastify from 'fastify'
 import { usersRepositories } from './repositories/users.repositories'
 
-interface RequestUser {
-  email: string
-  username: string
-  password: string
-}
+// interface RequestUser {
+//   email: string
+//   username: string
+//   password: string
+// }
 
 console.log(process.env.DATABASE_URL)
 

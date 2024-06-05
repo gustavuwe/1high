@@ -3,12 +3,22 @@
   "type": "module",
   "version": "1.0.0",
   "main": "index.js",
+  "lint-staged": {
+    "**/*.ts": [
+      "eslint --fix",
+      "prettier --write --ignore-unknown"
+    ]
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "tsx watch ./src/server.ts",
     "db:generate": "drizzle-kit generate",
     "db:drop": "drizzle-kit drop",
-    "db:migrate": "tsx src/db/migrate.ts"
+    "db:migrate": "tsx src/db/migrate.ts",
+    "prepare": "husky",
+    "format:check": "prettier . --check",
+    "format:write": "prettier . --write",
+    "lint:fix": "eslint --fix"
   },
   "keywords": [],
   "author": "",
@@ -28,6 +38,8 @@
     "drizzle-kit": "^0.21.2",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.5",
     "prettier": "3.2.5",
     "tsx": "^4.10.5",
     "typescript": "^5.4.5",
