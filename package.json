@@ -14,7 +14,7 @@
     "dev": "tsx watch ./src/server.ts",
     "db:generate": "drizzle-kit generate",
     "db:drop": "drizzle-kit drop",
-    "db:migrate": "tsx src/db/migrate.ts",
+    "db:migrate": "tsx src/drizzle/migrate.ts",
     "prepare": "husky",
     "format:check": "prettier . --check",
     "format:write": "prettier . --write",
@@ -29,7 +29,8 @@
     "drizzle-orm": "^0.30.10",
     "fastify": "^4.27.0",
     "postgres": "^3.4.4",
-    "uuidv4": "^6.2.13"
+    "uuidv4": "^6.2.13",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@eslint/js": "^9.4.0",

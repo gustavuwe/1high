@@ -8,7 +8,9 @@ import {
   varchar,
   timestamp,
   uuid,
-} from 'drizzle-orm/pg-core';
+} from 'drizzle-orm/pg-core'
+
+import { z } from 'zod'
 
 export const UserTable = pgTable('user', {
   id: uuid('id').primaryKey().defaultRandom(),
@@ -16,6 +18,5 @@ export const UserTable = pgTable('user', {
   email: text('email').unique().notNull(),
   password: varchar('password').notNull(),
   // role: text("role").$type<"admin" | "customer">(),
-  createdAt: timestamp('created_at'),
-  updatedAt: timestamp('updated_at'),
-});
+  // createdAt: timestamp('created_at'),
+})

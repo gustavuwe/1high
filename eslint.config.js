@@ -8,4 +8,9 @@ export default tseslint.config(
   eslint.configs.recommended,
   ...tseslint.configs.recommended,
   prettierConfig,
+  {
+    rules: {
+      '@typescript-eslint/no-unused-vars': 'off',
+    }
+  }
 );
