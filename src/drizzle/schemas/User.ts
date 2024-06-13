@@ -1,16 +1,7 @@
 // import { drizzle } from 'drizzle-orm/postgres-js';
 // import { migrate } from 'drizzle-orm/postgres-js/migrator';
 // import postgres from 'postgres';
-import {
-  serial,
-  pgTable,
-  text,
-  varchar,
-  timestamp,
-  uuid,
-} from 'drizzle-orm/pg-core'
-
-import { z } from 'zod'
+import { pgTable, text, varchar, timestamp, uuid } from 'drizzle-orm/pg-core'
 
 export const UserTable = pgTable('user', {
   id: uuid('id').primaryKey().defaultRandom(),
